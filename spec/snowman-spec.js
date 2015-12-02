@@ -1,27 +1,25 @@
-var Snowman = require( "../snowman" );
-
 describe( "A snowman", function(){
-  var olaf;
 
-  beforeEach(function(){
-    olaf = new Snowman("Olaf");
-  });
-
+  //My winter wonderland is a friendly place, so I want each snowman to have a name.
   it( "should have a name", function(){
-    expect( olaf.name ).toBeDefined();
+    //If I create a new snowman and set its 'name' property to  "Olaf", returning that snowman's name should return "Olaf"
   });
 
-  it("should have a carrot nose and stick arms", function () {
-    expect ( olaf.features ).toContain("carrot nose", "stick arms");
+  //In order for it to really be a snowman, it needs to have a carrot nose.
+  it("should have a carrot nose", function () {
+    //If I create a new snowman, I should immediately be able to return "carrot nose" as one of its features
   });
 
-  describe("A snowman named Olaf", function(){
-    var frosty;
+  //It also needs stick arms.
+  it("should have stick arms", function () {
+    //If I create a new snowman, I should immediately be able to return "stick arms" as one of its features
+  });
+
+  //If the snowman is named Olaf, he should like warm hugs.
+  describe( "a snowman named Olaf", function(){
     it( "should like warm hugs", function(){
-      frosty = new Snowman("Frosty");
-      expect( olaf.hug() ).toBe( "I like warm hugs!" );
-      expect( frosty.hug() ).not.toBe( "I like warm hugs!" );
+      //I will know that my Olaf likes warm hugs because when I call a function 'hug' on him, he will say, "I like warm hugs"
+      //If I hug a snowman with a different name, he should say something else
     });
   });
-
 });
